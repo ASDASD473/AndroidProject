@@ -40,6 +40,16 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         this.listener = listener;
     }
 
+    public void clear() {
+        transactions.clear();
+        noteVisibilityMap.clear();
+        notifyDataSetChanged();
+    }
+
+    public boolean isEmpty() {
+        return transactions == null || transactions.isEmpty();
+    }
+
     @NonNull
     @Override
     public TransactionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
