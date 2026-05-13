@@ -70,12 +70,14 @@ public class RecordDbHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, COLUMN_ID + " DESC");
 
         while (cursor.moveToNext()) {
+            long id = cursor.getLong(cursor.getColumnIndexOrThrow(COLUMN_ID));
             double amount = cursor.getDouble(cursor.getColumnIndexOrThrow(COLUMN_AMOUNT));
             String category = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CATEGORY));
             String note = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NOTE));
             String date = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DATE));
 
             Transaction transaction = new Transaction(amount, category, note, date);
+            transaction.setId(id);
             list.add(transaction);
         }
         cursor.close();
