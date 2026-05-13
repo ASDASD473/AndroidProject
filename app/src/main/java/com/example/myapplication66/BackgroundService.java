@@ -106,9 +106,9 @@ public class BackgroundService extends Service {
 
     private Notification createStatusNotification(String content) {
         return new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("🔄 后台任务运行中")
+                .setContentTitle("⚙️ 后台服务")
                 .setContentText(content)
-                .setSmallIcon(android.R.drawable.ic_menu_rotate)
+                .setSmallIcon(android.R.drawable.ic_menu_manage)
                 .setOngoing(true)
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .build();
