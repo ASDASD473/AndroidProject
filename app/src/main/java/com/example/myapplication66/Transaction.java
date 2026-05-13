@@ -8,10 +8,15 @@ package com.example.myapplication66;
  * </p>
  *
  * @author Your Name
- * @version 1.0
+ * @version 1.1
  * @since 1.0
  */
 public class Transaction {
+
+    /**
+     * 记录ID（数据库主键）
+     */
+    private long id;
 
     /**
      * 消费金额（单位：元）
@@ -34,6 +39,24 @@ public class Transaction {
     private String date;
 
     /**
+     * 获取记录ID
+     *
+     * @return 记录ID
+     */
+    public long getId() {
+        return id;
+    }
+
+    /**
+     * 设置记录ID
+     *
+     * @param id 记录ID
+     */
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    /**
      * 默认构造方法
      * <p>
      * 创建一个空的消费记录对象，所有字段将被初始化为默认值。
@@ -41,6 +64,7 @@ public class Transaction {
      * </p>
      */
     public Transaction() {
+        this.id = 0;
         this.amount = 0.0;
         this.category = "";
         this.note = "";
