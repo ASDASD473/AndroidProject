@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application66</string>
+
+    <!-- 消费记录页面字符串 -->
+    <string name="total_expense">总消费</string>
+    <string name="add_expense">+ 添加消费记录</string>
+    <string name="empty_state_message">暂无消费记录，点击上方按钮添加</string>
+    <string name="initial_amount">¥0.00</string>
+</resources>
