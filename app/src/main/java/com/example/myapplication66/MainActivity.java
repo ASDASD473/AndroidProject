@@ -355,8 +355,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        tvStorageStatus.setText("保存成功！共保存 " + savedCount + " 条记录");
-        Toast.makeText(this, "数据已保存到数据库", Toast.LENGTH_SHORT).show();
+        tvStorageStatus.setText("✅ 保存成功！共保存 " + savedCount + " 条记录");
+        Toast.makeText(this, "📥 数据已保存到数据库", Toast.LENGTH_SHORT).show();
     }
 
     private void loadDataFromDatabase() {
